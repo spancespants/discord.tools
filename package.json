@@ -1,0 +1,18 @@
+{
+  "name": "raider.io.wrapper",
+  "version": "1.0.0",
+  "description": "A wrapper for the Raider.io API in Node",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Spencer Hanson",
+  "license": "ISC",
+  "dependencies": {
+    "hapi": "^17.6.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "request-promise-native": "^1.0.5"
+  }
+}
