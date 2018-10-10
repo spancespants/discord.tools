@@ -27,6 +27,7 @@ async function start() {
             to: channelId,
             message: 'slop'
           });
+        break;
         case 'affixes':
           const affixes = await raiderIO.getAffixes();
           bot.sendMessage({
