@@ -5,7 +5,7 @@ const raiderIO = require('../src/repositories/raiderIO');
 
 async function start() {
   const bot = new Discord.Client({
-    token: 'NDk5Mzk4MTE2Mjk5MjQzNTIx.Dp7s7g.gluAwNDxS6OlNPujWg5fqZivFaw',
+    token: '',
     autorun: true
   });
 
