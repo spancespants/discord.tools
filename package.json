@@ -14,6 +14,7 @@
   "author": "Spencer Hanson",
   "license": "ISC",
   "dependencies": {
+    "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
     "hapi": "^17.6.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.2",
