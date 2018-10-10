@@ -2,10 +2,13 @@
 
 const Discord = require('discord.io');
 const raiderIO = require('../src/repositories/raiderIO');
+require('dotenv').config();
 
 async function start() {
+
+  console.log(process.env.DISCORD_KEY);
   const bot = new Discord.Client({
-    token: '',
+    token: process.env.DISCORD_KEY,
     autorun: true
   });
 
