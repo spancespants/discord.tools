@@ -13,8 +13,9 @@ async function getAffixes() {
         locale: 'en'
       }
     });
+    const affixes = JSON.parse(resp).affix_details
 
-    return JSON.parse(resp).title;
+    return `+2 ${affixes[0].name}, +4 ${affixes[1].name}, +7 ${affixes[2].name}, +10 ${affixes[3].name}`
 
   } catch(err) {
     console.log(err.message);
