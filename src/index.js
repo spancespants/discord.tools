@@ -27,7 +27,7 @@ async function start() {
         case 'slurp':
           bot.sendMessage({
             to: channelId,
-            message: 'slop'
+            message: '*smirks*'
           });
         break;
         case 'affixes':
