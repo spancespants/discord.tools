@@ -34,7 +34,7 @@ async function start() {
           const affixes = await raiderIO.getAffixes();
           bot.sendMessage({
             to: channelId,
-            message: JSON.stringify(affixes)
+            message: affixes
           });
           break;
       }
