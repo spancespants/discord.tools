@@ -27,7 +27,7 @@ async function start() {
         case 'slurp':
           bot.sendMessage({
             to: channelId,
-            message: '*smirks*'
+            message: '*sluuuurp*'
           });
         break;
         case 'affixes':
@@ -38,6 +38,11 @@ async function start() {
           });
           break;
       }
+    } else if (message.toLowerCase().match(/dad/)) {
+      bot.sendMessage({
+        to: channelId,
+        message: '*smirks*'
+      });
     }
   });
 
