@@ -44,6 +44,12 @@ async function start() {
         message: '*smirks*'
       });
     }
+    else if (message.toLowerCase().match(/seth/) && user !== 'Dad') {
+      bot.sendMessage({
+        to: channelId,
+        message: 'Hey Seth, look at this emoji <:FeelsNeatMan:477534378570809353> Hey Seth, what are you drinking? :beers:  Hey Seth, want to game? <:EZFingerGuns:498169352772648975> Hey Seth, what are you thinking? <:FeelsMinionMan:505409023051431951>'
+      });
+    }
   });
 
 };
