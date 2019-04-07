@@ -37,10 +37,10 @@ async function start() {
             message: affixes
           });
           break;
-        case: 'schedule':
+        case 'schedule':
         bot.sendMessage({
           to: channelId,
-          message: "Thursday = Jordan @Goose; Friday = Spencer @YaBoiBangz; Saturday = Seth @VomitCat; Sunday = Mikkel @hamtaro; Monday = Froob @McFroob; Tuesday = Adam @T0x1x; Wednesday = Ross @Minz. "
+          message: "Thursday = Jordan @Goose; \n Friday = Spencer @YaBoiBangz; \n Saturday = Seth @VomitCat; \n Sunday = Mikkel @hamtaro; \n Monday = Froob @McFroob; \n Tuesday = Adam @T0x1x; \n Wednesday = Ross @Minz. "
         });
         break;
       }
