@@ -2,6 +2,7 @@
 
 const Discord = require('discord.io');
 const raiderIO = require('../src/repositories/raiderIO');
+const sample = require('lodash.sample')
 require('dotenv').config();
 
 async function start() {
@@ -21,9 +22,10 @@ async function start() {
       let args = message.substring(1).split(' ');
       const cmd = args[0];
       args = args.splice(1);
+      const command = cmd.toLowerCase();
 
 
-      switch(cmd) {
+      switch(command) {
         case 'slurp':
           bot.sendMessage({
             to: channelId,
@@ -41,6 +43,20 @@ async function start() {
         bot.sendMessage({
           to: channelId,
           message: "Thursday = Jordan @Goose; \n Friday = Spencer @YaBoiBangz; \n Saturday = Seth @VomitCat; \n Sunday = Mikkel @hamtaro; \n Monday = Froob @McFroob; \n Tuesday = Adam @T0x1x; \n Wednesday = Ross @Minz. "
+        });
+        break;
+        case 'randomretard':
+        const people = ['Jordan', 'Seth', 'Brandon', 'Richie', 'Mikkel', 'Adam', 'Ross', 'Sam']
+        const random = sample(people);
+        bot.sendMessage({
+          to: channelId,
+          message: `Random retard alert: ${random}`
+        });
+        break;
+        case 'help':
+        bot.sendMessage({
+          to: channelId,
+          message: 'List of commands: slurp, affixes, schedule, randomRetard'
         });
         break;
       }
