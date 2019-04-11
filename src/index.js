@@ -46,7 +46,7 @@ async function start() {
         });
         break;
         case 'randomretard':
-        const people = ['Jordan', 'Seth', 'Brandon', 'Richie', 'Mikkel', 'Adam', 'Ross', 'Sam']
+        const people = ['Spencer', 'Jordan', 'Seth', 'Brandon', 'Richie', 'Mikkel', 'Adam', 'Ross', 'Sam']
         const random = sample(people);
         bot.sendMessage({
           to: channelId,
