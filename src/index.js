@@ -45,12 +45,12 @@ async function start() {
           message: "Thursday = Jordan @Goose; \n Friday = Spencer @YaBoiBangz; \n Saturday = Seth @VomitCat; \n Sunday = Mikkel @hamtaro; \n Monday = Froob @McFroob; \n Tuesday = Adam @T0x1x; \n Wednesday = Ross @Minz. "
         });
         break;
-        case 'randomretard':
+        case 'randomDingus':
         const people = ['Spencer', 'Jordan', 'Seth', 'Brandon', 'Richie', 'Mikkel', 'Adam', 'Ross', 'Sam']
         const random = sample(people);
         bot.sendMessage({
           to: channelId,
-          message: `Random retard alert: ${random}`
+          message: `Random dingus alert: ${random}`
         });
         break;
         case 'help':
