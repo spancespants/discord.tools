@@ -55,7 +55,7 @@ async function start() {
         case 'help':
         bot.sendMessage({
           to: channelId,
-          message: 'List of commands: slurp, affixes, schedule, dodt'
+          message: 'List of commands: slurp, affixes, schedule, dotd'
         });
         break;
       }
