@@ -1,8 +1,6 @@
 'use strict';
 
 const Discord = require('discord.io');
-const raiderIO = require('../src/repositories/raiderIO');
-const sample = require('lodash.sample');
 const { command } = require('./handlers/commandHandler');
 require('dotenv').config();
 

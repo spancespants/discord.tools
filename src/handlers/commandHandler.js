@@ -1,6 +1,8 @@
 'use strict'
 
 const { getPlaylist } = require('../repositories/spotify');
+const sample = require('lodash.sample');
+const raiderIO = require('../repositories/raiderIO');
 
 async function command(bot, user, userId, channelId, message, evt) {
   if (message.substring(0, 1) === '!') {
