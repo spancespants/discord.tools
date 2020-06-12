@@ -1,7 +1,7 @@
 
-const { getPlaylist } = require('../repositories/spotify');
-const sample = require('lodash.sample');
+const {handlePlaylist} = require('./playlistHandler');
 const raiderIO = require('../repositories/raiderIO');
+const sample = require('lodash.sample');
 
 
 async function command(bot, user, userId, channelId, message, evt) {
@@ -40,11 +40,7 @@ async function command(bot, user, userId, channelId, message, evt) {
         });
         break;
       case 'playlist':
-        const playlist = await getPlaylist();
-        bot.sendMessage({
-          to: channelId,
-          message: playlist
-        });
+        await handlePlaylist(bot, channelId, command, args);
         break;
       case 'help':
         bot.sendMessage({
