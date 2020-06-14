@@ -2,7 +2,7 @@
 
 
 let person;
-let counter = 10;
+let counter = 0;
 
 const people = [
     'Jimmy',
