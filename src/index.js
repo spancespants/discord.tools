@@ -27,6 +27,8 @@ async function start() {
     await command(bot, user, userId, channelId, message, evt);
   });
 
+  console.log(`Discord Tools started at: ${Date()}`);
+
 };
 
 start();
