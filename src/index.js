@@ -8,7 +8,7 @@ require('dotenv').config();
 
 async function start() {
 
-  const job = new CronJob('*/30 * * * *', function() {
+  const job = new CronJob('0 * * * *', function() {
     determinePerson()
   });
   job.start();

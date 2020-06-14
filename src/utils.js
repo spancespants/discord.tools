@@ -2,7 +2,7 @@
 
 
 let person;
-let counter = 0;
+let counter = 1;
 
 const people = [
     'Jimmy',
@@ -24,6 +24,7 @@ function determinePerson() {
     console.log(`Hour ${date.getHours()}`)
     if (date.getHours() === 5) {
         counter++;
+        console.log(`Person changing...Counter: ${counter}`);
     }
     if (counter > 11) {
         counter = 0;
