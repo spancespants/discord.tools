@@ -9,7 +9,11 @@ require('dotenv').config();
 async function start() {
 
   const job = new CronJob('0 * * * *', function() {
-    determinePerson()
+    try {
+      determinePerson()
+    } catch(error) {
+      console.log(`Error determining person: ${error.message}`);
+    }
   });
   job.start();
 
