@@ -8,12 +8,10 @@ require('dotenv').config();
 
 async function start() {
 
-  // const job = new CronJob('* * * * *', determinePerson());
-  // job.start();
-  // var job = new CronJob('* * * * *', function() {
-  //   determinePerson();
-  // }, null, true, 'America/Los_Angeles');
-  // job.start();
+  const job = new CronJob('*/30 * * * *', function() {
+    determinePerson()
+  });
+  job.start();
 
   const bot = new Discord.Client({
     token: process.env.DISCORD_KEY,
