@@ -21,7 +21,8 @@ const people = [
 
 function determinePerson() {
     let date = new Date();
-    if (date.getHours() === 0) {
+    console.log(`Hour ${date.getHours()}`)
+    if (date.getHours() === 5) {
         counter++;
     }
     if (counter > 11) {
