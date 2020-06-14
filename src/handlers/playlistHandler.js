@@ -1,11 +1,10 @@
 'use strict';
 
 const { getPlaylist, addSong } = require("../repositories/spotify");
-const { findPerson } = require('../utils');
+const { getPerson } = require('../utils');
 
 async function handlePlaylist(bot, channelId, command, args) {
-    let playlist, who;
-
+    let playlist;
 
     switch(args[0]) {
         case ('-old'):
@@ -23,10 +22,10 @@ async function handlePlaylist(bot, channelId, command, args) {
             });
             break;
         case ('-who'):
-            who = findPerson();
+            let who = getPerson();
             bot.sendMessage({
                 to: channelId,
-                message: 'I can\'t do that yet'
+                message: who
             });
             break;
         default:

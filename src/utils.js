@@ -2,9 +2,9 @@
 
 
 let person;
+let counter = 10;
+
 const people = [
-    'Adam',
-    'Sam',
     'Jimmy',
     'Jordan',
     'Mcfroob',
@@ -14,16 +14,25 @@ const people = [
     'Seth',
     'Spencer',
     'Derek',
-    'Mikkel'
+    'Mikkel',
+    'Adam',
+    'Sam',
 ];
 
 function determinePerson() {
-    console.log('ping');
+    let date = new Date();
+    if (date.getHours() === 0) {
+        counter++;
+    }
+    if (counter > 11) {
+        counter = 0;
+    }
+    console.log(`Person ${people[counter]}`);    
 }
 
 
 function getPerson() {
-    return person;
+    return people[counter];
 }
 
 module.exports = {
