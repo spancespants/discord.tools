@@ -1,6 +1,6 @@
 'use strict';
 
-const Discord = require('discord.io');
+const Discord = require('discord.js');
 const {CronJob} = require('cron')
 const {determinePerson} = require('./utils');
 const { command } = require('./handlers/commandHandler');
@@ -17,19 +17,24 @@ async function start() {
   });
   job.start();
 
-  const bot = new Discord.Client({
-    token: process.env.DISCORD_KEY,
-    autorun: true
-  });
+  const bot = new Discord.Client();
+  bot.login(process.env.DISCORD_KEY);
 
   bot.on('ready', () => {
-    console.log('Connected and ready');
-    console.log(`Logged in as ${bot.username} - ${bot.id}`);
+    console.log('Discord bot connected and ready');
   });
 
-  bot.on('message', async (user, userId, channelId, message, evt) => {
-    await command(bot, user, userId, channelId, message, evt);
+  bot.on('message', async (message) => {
+    try {
+      let reply = await command(message);
+    } catch(error) {
+      console.log(`Error repyling to message: ${message}, ${error.message}`);
+    }
   });
+
+  bot.on('error', async (error) => {
+    console.log(error);
+  })
 
   console.log(`Discord Tools started at: ${Date()}`);
 

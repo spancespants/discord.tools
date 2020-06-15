@@ -3,45 +3,29 @@
 const { getPlaylist, addSong } = require("../repositories/spotify");
 const { getPerson } = require('../utils');
 
-async function handlePlaylist(bot, channelId, command, args) {
+async function handlePlaylist(command, args, message) {
     let playlist;
 
     switch(args[0]) {
         case ('-old'):
             playlist = await getPlaylist('v1');
-            bot.sendMessage({
-                to: channelId,
-                message: playlist
-            });
+            message.reply(playlist);
             break;
         case ('-current'):
             playlist = await getPlaylist('v2');
-            bot.sendMessage({
-                to: channelId,
-                message: playlist
-            });
+            message.reply(playlist);
             break;
         case ('-who'):
             let who = getPerson();
-            bot.sendMessage({
-                to: channelId,
-                message: who
-            });
+            message.reply(`${who} is in charge of sotd today`);
             break;
         default:
-            bot.sendMessage({
-                to: channelId,
-                message: `Playlist command requires one of the following arguments:
-                 -old
-                 -current
-                 -who`
-            });
+            message.reply(`Playlist command requires one of the following arguments:
+            -old
+            -current
+            -who`);
             break;
-            
-        
-
-    }
-    
+    }   
 }
 
 module.exports = {
