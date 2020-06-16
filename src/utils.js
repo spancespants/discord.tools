@@ -1,8 +1,9 @@
 'use strict';
 
+require('dotenv').config();
 
 let person;
-let counter = 1;
+let counter = process.env.PERSON_COUNTER;
 
 const people = [
     'Jimmy',
